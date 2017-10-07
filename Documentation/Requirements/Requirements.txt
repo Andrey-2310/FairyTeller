@@ -1,0 +1,35 @@
+Requirements to Fairy Teller project
+
+1. Introduction
+ 		This project is a Web-application, the aim of which is expansion of reader community all over the world. On this site users will be able to write their own works, read masterpieces of the famous artists and amateurs, order works they like.
+There won’t be any chats between users. Buying process will be fake.
+
+ 2. User requirements
+	2.1 Program interfaces
+      Auth0 service is used to generate tokens for users.
+      JWT technology is used to manage requests.
+      Cloudinary cloud platform is used to keep images from website.
+
+2.2 User interface
+      This project will have user-friendly interface and look like book, text editor or online shop depending on what user is going to do.
+
+	2.3 User characteristics
+1. The writer: the man who wants to publish his work or come up with a continuation of existing work;
+2. The reader: the man who is interested in reading;
+3. The buyer: the man who wants to buy masterpiece he likes
+
+	2.4 Assumptions è dependencies
+Some problems with rendering in old versions of browsers may occur.
+
+ 3. System requirements
+	3.1 Functional requirements
+1. Works of amateur artists are posted in full version, and works of famous artists are posted in a short version. The continuation of work created by user which is not the author can be attached to this work.
+2. Unauthenticated users have a possibility to watch works of all artists. 
+3. Authenticated users in addition have an opportunity to create and edit their own works; continue, comment and estimate other’s works; order books
+4. Possibility to order the book you like. Each order will be individual (user may choose cover, font size etc.)  
+
+	3.2 Non-Functional requirements
+3.2.1 Software Quality attributes
+1. User-friendly interface: Intuitive and lightness interface is based on Angular 2 framework with Material Design library from Google. This library will bring adaptive modern design. 
+2. Security: will be implemented with Spring Security and JWT and prevent server from unauthorized requests. 
+
