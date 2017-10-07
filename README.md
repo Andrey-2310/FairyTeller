@@ -11,4 +11,6 @@ Back-end:
  **Angular 2**
 
 ## Services
+ **Auth0** - user token management.
+
  **Cloudinary** - image and video management in the cloud.
