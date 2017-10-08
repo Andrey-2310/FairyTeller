@@ -52,12 +52,16 @@ Some problems with rendering in old versions of browsers may occur.
 * Carousel to choose cover user likes
 * Order button (click will implement ordering the book).
 
-	3.2 Non-Functional requirements
+3.2 Non-Functional requirements
+
 3.2.1 Software Quality attributes
 * Security: will be and prevent server from unauthorized requests. Only authenticated users may change content of database.
 * Performance: users don't want to wait for a long time watching the web page is loading. To avoid wasting precious time user must wait maximum 1 second to load any page on web app. Measures in time needed to load web page.
 * Reliability: users should have a possibility to work with site 24/7.  That’s why it’s important to provide such ability for them. Measures count of situations when user can't load web page.
 * User-friendly interface: measures in user ability to intuitively understand the context and search the site without any problems.
+
+
+  3.3 General requirements
 
 3.2.2 General Patterns
 * Works of amateur artists are posted in full version
