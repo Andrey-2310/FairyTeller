@@ -19,3 +19,9 @@ Angular 2, HTML, CSS, Material Design
  **Cloudinary** - image and video management in the cloud.
  
  **JWT** - technology for managing requests.
+ 
+ ## Analogs
+ [OZ.by](https://oz.by)  - site for ordering books and other stuff
+ 
+ [Questia.com](https://www.questia.com) - site with large collection of books
+ 
