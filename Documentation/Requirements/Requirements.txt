@@ -1,8 +1,8 @@
 Requirements to Fairy Teller project
 
 1. Introduction
- 		This project is a Web-application, the aim of which is expansion of reader community all over the world. On this site users will be able to write their own works, read masterpieces of the famous artists and amateurs, order works they like.
-There won’t be any chats between users. Buying process will be fake.
+Â 		This project is a Web-application, the aim of which is expansion of reader community all over the world. On this site users will be able to write their own works, read masterpieces of the famous artists and amateurs, order works they like.
+There wonâ€™t be any chats between users. Buying process will be fake.
 
  2. User requirements
 
@@ -25,7 +25,7 @@ There won’t be any chats between users. Buying process will be fake.
 * The reader: person who is interested in reading;
 * The buyer: person who wants to buy masterpiece he likes
 
-	2.4 Assumptions è dependencies
+	2.4 Assumptions Ã¨ dependencies
 Some problems with rendering in old versions of browsers may occur.
 
  3. System requirements
@@ -40,7 +40,7 @@ Some problems with rendering in old versions of browsers may occur.
 
   3.1.2 Navigation bar on the left side of almost each web page
 * Buttons with genres of works. User will see the most popular works in chosen genre by clicking certain button.
-* Toggle to include amateur’s works. 
+* Toggle to include amateurâ€™s works. 
 
 3.1.3 Book appearance
 * Original cover of book
@@ -57,20 +57,20 @@ Some problems with rendering in old versions of browsers may occur.
 3.2.1 Software Quality attributes
 * Security: will be and prevent server from unauthorized requests. Only authenticated users may change content of database.
 * Performance: users don't want to wait for a long time watching the web page is loading. To avoid wasting precious time user must wait maximum 1 second to load any page on web app. Measures in time needed to load web page.
-* Reliability: users should have a possibility to work with site 24/7.  That’s why it’s important to provide such ability for them. Measures count of situations when user can't load web page.
+* Reliability: users should have a possibility to work with site 24/7.  Thatâ€™s why itâ€™s important to provide such ability for them. Measures count of situations when user can't load web page.
 * User-friendly interface: measures in user ability to intuitively understand the context and search the site without any problems.
 
 
   3.3 General requirements
 
-3.2.2 General Patterns
+3.3.1 General Patterns
 * Works of amateur artists are posted in full version
 * Works of famous artists are posted in a short version. 
 * The continuation of work created by user which is not the author can be attached to this work.
 
-   3.2.3 Role abilities
+   3.3.2 Role abilities
 * Unauthenticated users have a possibility to watch works of all artists. 
-* Authenticated users in addition have an opportunity to create and edit their own works; continue, comment and estimate other’s works; order books
+* Authenticated users in addition have an opportunity to create and edit their own works; continue, comment and estimate otherâ€™s works; order books
 * Admin may process orders, delete and block users.
 
 
