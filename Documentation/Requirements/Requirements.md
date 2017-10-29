@@ -68,12 +68,12 @@ User may switch the language of the application content
 
  ## 3.3 General requirements
 
-### 3.2.2	General Patterns
+### 3.3.1	General Patterns
 *	Works of amateur artists are posted in full version
 *	Works of famous artists are posted in a short version. 
 *	The continuation of work created by user which is not the author can be attached to this work.
 
- ###  3.2.3 Role abilities
+ ###  3.3.2 Role abilities
 *	Unauthenticated users have a possibility to watch works of all artists. 
 *	Authenticated users in addition have an opportunity to create and edit their own works; continue, comment and estimate other’s works; order books
 *	Admin may process orders, delete and block users.
