@@ -11,7 +11,7 @@ Java + Spring Framework
 PostgreSQL
 
 ### Front-end: 
-Angular 2, HTML, CSS, Material Design
+Angular 2, HTML, CSS, Material Design, Bootstrap
 
 ## Services
  **Auth0** - user token management.
