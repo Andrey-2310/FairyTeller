@@ -2,6 +2,7 @@ package com.rad.fairyteller.domain.work;
 
 import com.rad.fairyteller.domain.author.Author;
 import com.rad.fairyteller.domain.chapter.Chapter;
+import com.rad.fairyteller.domain.purchase.Purchase;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -28,4 +29,7 @@ public class Work {
 
     @OneToMany(mappedBy = "work", cascade = CascadeType.ALL)
     private List<Chapter> chapters;
+
+    @OneToMany(mappedBy = "work", cascade=CascadeType.ALL)
+    private List<Purchase> purchases;
 }

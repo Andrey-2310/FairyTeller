@@ -1,7 +1,7 @@
 package com.rad.fairyteller.domain.author;
 
-import com.rad.fairyteller.domain.work.Work;
 import com.rad.fairyteller.domain.user.User;
+import com.rad.fairyteller.domain.work.Work;
 import lombok.Data;
 
 import javax.persistence.*;
