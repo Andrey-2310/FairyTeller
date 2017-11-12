@@ -13,6 +13,10 @@
 *	Cloudinary cloud platform for keeping images from website.
 ### 2.2 User interface
    The user interface will provide facilities on the web pages to navigate user through various information about authors, genres, books with their description, content and rating. Depending on the situation page will look like a book, teaxt-editor or inline shop. For more details see mockups.
+![reading_window]( https://github.com/Andrey-2310/FairyTeller/blob/master/Documentation/Mockups/reading.png)
+![editing_window](https://github.com/Andrey-2310/FairyTeller/blob/master/Documentation/Mockups/editing.png)
+![ordering_window](https://github.com/Andrey-2310/FairyTeller/blob/master/Documentation/Mockups/ordering.png)
+![choosing_window](https://github.com/Andrey-2310/FairyTeller/blob/master/Documentation/Mockups/choosing.png)
 ### 2.3 User characteristics
 *	The writer: person who wants to publish his work or come up with a continuation of existing work;
 *	The reader: person who is interested in reading published works;
