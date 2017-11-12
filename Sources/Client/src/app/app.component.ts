@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
 import {PurchaseService} from "./common/services/purchase.service";
-import {Purchase, PurchaseList} from "./common/models/purchase.model";
-import {Observable} from "rxjs/Observable";
+import {PurchaseList} from "./common/models/purchase.model";
+
 
 @Component({
   selector: 'app-root',
@@ -14,7 +14,6 @@ export class AppComponent {
   }
 
   purchases: PurchaseList;
-  title = 'app';
 
   getUserPurchases = (): void => {
     this.purchaseService.getPurchasesByUserId(1).subscribe(data => this.purchases= data);

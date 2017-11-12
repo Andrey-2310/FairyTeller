@@ -2,13 +2,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule }   from '@angular/common/http';
 
-
 import { AppComponent } from './app.component';
-
+import {IntroductionComponent} from "./modules/startPage/introduction/introduction.component";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    IntroductionComponent
   ],
   imports: [
     BrowserModule,
