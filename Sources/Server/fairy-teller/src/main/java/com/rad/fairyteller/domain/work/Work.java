@@ -23,6 +23,9 @@ public class Work {
     @Column(name = "description")
     private String description;
 
+    @Column(name = "coverImage")
+    private String coverImagePath;
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "author_id")
     private Author author;
@@ -32,4 +35,5 @@ public class Work {
 
     @OneToMany(mappedBy = "work", cascade=CascadeType.ALL)
     private List<Purchase> purchases;
+
 }

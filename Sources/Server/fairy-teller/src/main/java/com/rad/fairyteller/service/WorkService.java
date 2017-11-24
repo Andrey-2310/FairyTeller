@@ -20,7 +20,7 @@ public class WorkService {
         workRepository.save(work);
     }
 
-    public List<Work> getWorksByUserId(Long id){
+    public List<Work> getWorksByAuthorId(Long id){
         return workRepository.findAllByAuthor_Id(id);
     }
 
