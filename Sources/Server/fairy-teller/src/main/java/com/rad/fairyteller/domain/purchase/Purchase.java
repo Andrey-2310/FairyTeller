@@ -1,11 +1,8 @@
 package com.rad.fairyteller.domain.purchase;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.rad.fairyteller.domain.user.User;
 import com.rad.fairyteller.domain.work.Work;
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
@@ -20,6 +17,9 @@ public class Purchase {
 
     @Column(name = "price")
     private int price;
+
+    @Column(name="date")
+    private String date;
 
     @ManyToOne
     @JoinColumn(name = "user_id")

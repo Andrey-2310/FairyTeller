@@ -1,7 +1,7 @@
 package com.rad.fairyteller.service.mapper;
 
 import com.rad.fairyteller.domain.purchase.Purchase;
-import com.rad.fairyteller.service.dto.PurchaseDto;
+import com.rad.fairyteller.service.dto.purchaseDto.PurchaseDto;
 import org.mapstruct.*;
 import org.mapstruct.factory.Mappers;
 
@@ -11,10 +11,10 @@ import java.util.List;
 public interface PurchaseMapper extends EntityMapper<PurchaseDto, Purchase> {
     PurchaseMapper INSTANCE = Mappers.getMapper(PurchaseMapper.class);
 
-    @Mappings({
-            @Mapping(target = "userId", source = "purchase.user.id"),
-            @Mapping(target = "workId", source = "purchase.work.id"),
-    })
+//    @Mappings({
+//            @Mapping(target = "userId", source = "purchase.user.id"),
+//            @Mapping(target = "workId", source = "purchase.work.id"),
+//    })
     PurchaseDto toDto(Purchase purchase);
 
     List<PurchaseDto> toDto(List<Purchase> purchaseList);
