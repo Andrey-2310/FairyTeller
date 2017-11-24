@@ -12,15 +12,17 @@ import java.util.List;
 @RestController
 public class WorkController {
     private final WorkService workService;
+    private final WorkMapper workMapper;
 
     @Autowired
-    public WorkController(WorkService masterpieceService) {
+    public WorkController(WorkService masterpieceService, WorkMapper workMapper) {
         this.workService = masterpieceService;
+        this.workMapper = workMapper;
     }
 
     @RequestMapping(path = "/worksByAuthorId/{id}")
     public List<WorkDto> getWorks(@PathVariable Long id) {
-        return WorkMapper.INSTANCE.toDto(workService.getWorksByAuthorId(id));
+        return workMapper.toDto(workService.getWorksByAuthorId(id));
     }
 
     @RequestMapping(path = "/work", method = RequestMethod.POST)

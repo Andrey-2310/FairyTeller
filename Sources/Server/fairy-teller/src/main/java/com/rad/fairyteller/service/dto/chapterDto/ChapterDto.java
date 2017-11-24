@@ -1,6 +1,6 @@
 package com.rad.fairyteller.service.dto.chapterDto;
 
-import com.rad.fairyteller.service.dto.UnitDto.UnitDto;
+import com.rad.fairyteller.service.dto.unitDto.UnitDto;
 import lombok.Data;
 
 import java.util.List;

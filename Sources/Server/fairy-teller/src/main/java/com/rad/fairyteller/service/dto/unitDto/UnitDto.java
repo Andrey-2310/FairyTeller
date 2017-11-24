@@ -1,4 +1,4 @@
-package com.rad.fairyteller.service.dto.UnitDto;
+package com.rad.fairyteller.service.dto.unitDto;
 
 import lombok.Data;
 
