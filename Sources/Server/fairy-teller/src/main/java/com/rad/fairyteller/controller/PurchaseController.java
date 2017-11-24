@@ -13,16 +13,18 @@ import java.util.List;
 @CrossOrigin
 public class PurchaseController {
     private final PurchaseService purchaseService;
+    private final PurchaseMapper purchaseMapper;
 
 
     @Autowired
-    public PurchaseController(PurchaseService purchaseService) {
+    public PurchaseController(PurchaseService purchaseService, PurchaseMapper purchaseMapper) {
         this.purchaseService = purchaseService;
+        this.purchaseMapper = purchaseMapper;
     }
 
     @RequestMapping(path = "/purchaseListByUserId/{id}")
     public List<PurchaseDto> getPurchaseListByUserId(@PathVariable Long id) {
-        return PurchaseMapper.INSTANCE.toDto(purchaseService.getPurchaseListByUserId(id));
+        return purchaseMapper.toDto(purchaseService.getPurchaseListByUserId(id));
     }
 
     @RequestMapping(path = "/purchase/save", method = RequestMethod.POST)

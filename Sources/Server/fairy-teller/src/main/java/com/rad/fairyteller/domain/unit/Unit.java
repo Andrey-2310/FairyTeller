@@ -23,5 +23,5 @@ public class Unit {
 
     @Column(name = "type")
     @Enumerated(EnumType.STRING)
-    private ContentType type;
+    private ContentType contentType;
 }
