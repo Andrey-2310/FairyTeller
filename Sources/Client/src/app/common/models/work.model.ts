@@ -5,5 +5,8 @@ export class Work {
   authorName: string;
   title: string;
   chapters: Array<Chapter>;
+}
 
+export interface WorkList{
+  purchases: Work[];
 }
