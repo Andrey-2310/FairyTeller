@@ -8,5 +8,7 @@ import java.util.List;
 public class ChapterDto {
     private Long id;
     private String title;
+    private Long innerId;
+    private Long workId;
     private List<UnitDto> units;
 }

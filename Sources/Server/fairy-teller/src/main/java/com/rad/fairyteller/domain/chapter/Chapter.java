@@ -19,10 +19,12 @@ public class Chapter {
     @Column(name = "title")
     private String title;
 
+    @Column(name = "innerId")
+    private Long innerId;
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "work_id")
     private Work work;
-
 
     @OneToMany(mappedBy = "chapter", cascade = CascadeType.ALL)
     private List<Unit> units;
