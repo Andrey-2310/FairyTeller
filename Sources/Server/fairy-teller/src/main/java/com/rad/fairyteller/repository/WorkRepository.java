@@ -9,4 +9,6 @@ import java.util.List;
 @Repository
 public interface WorkRepository extends JpaRepository<Work, Long> {
     List<Work> findAllByAuthor_Id(Long id);
+    List<Work> findTop5ByViewsLessThanOrderByViewsDesc(Integer from);
+    List<Work> findTop5ByOrderByViewsDesc();
 }

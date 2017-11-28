@@ -1,15 +1,20 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs/Observable';
-import {PurchaseList} from '../models/purchase.model';
 import 'rxjs/add/operator/map';
+import {WorkList} from "../models/work.model";
 
 @Injectable()
 export class WorkService {
 
-  constructor(private http: HttpClient){}
+  constructor(private http: HttpClient) {
+  }
 
-  getWorksByUserId(id: number): Observable<PurchaseList> {
-    return this.http.get<PurchaseList>('http://localhost:8080//worksByUserId/'+ id)
+  getWorksByUserId(id: number): Observable<WorkList> {
+    return this.http.get<WorkList>('http://localhost:8080//worksByAuthorId/' + id)
+  }
+
+  getNextPopularWorks(from?: number): Observable<WorkList> {
+    return this.http.get<WorkList>('http://localhost:8080//nextPopularWorks/' + (from ? from : -1))
   }
 }

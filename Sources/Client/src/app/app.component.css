@@ -1,0 +1,14 @@
+.main {
+  display: inline-flex;
+  height: 700px;
+  width: 100%;
+}
+
+.subBook {
+  width: 70%;
+}
+
+.kek {
+  width: 30%;
+}
+

@@ -17,6 +17,9 @@ public class Work {
     @Column(name = "work_id")
     private Long id;
 
+    @Column(name = "views")
+    private int views;
+
     @Column(name = "title")
     private String title;
 

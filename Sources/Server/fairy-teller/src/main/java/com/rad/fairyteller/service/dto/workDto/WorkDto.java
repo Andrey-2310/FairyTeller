@@ -5,6 +5,7 @@ import lombok.Data;
 @Data
 public class WorkDto {
     private Long id;
+    private int views;
     private Long authorId;
     private String description;
     private String title;

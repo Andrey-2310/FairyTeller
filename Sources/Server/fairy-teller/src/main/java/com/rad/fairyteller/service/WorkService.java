@@ -16,12 +16,16 @@ public class WorkService {
         this.workRepository = workRepository;
     }
 
-    public void saveOrUpdateWork(Work work){
+    public void saveOrUpdateWork(Work work) {
         workRepository.save(work);
     }
 
-    public List<Work> getWorksByAuthorId(Long id){
+    public List<Work> getWorksByAuthorId(Long id) {
         return workRepository.findAllByAuthor_Id(id);
     }
 
+    public List<Work> getNextPopularWorks(Integer from) {
+        return from.equals(-1) ? workRepository.findTop5ByOrderByViewsDesc() :
+                workRepository.findTop5ByViewsLessThanOrderByViewsDesc(from);
+    }
 }

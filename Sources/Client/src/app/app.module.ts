@@ -4,8 +4,8 @@ import { HttpClientModule }   from '@angular/common/http';
 
 
 import { AppComponent } from './app.component';
-import { BookListComponent } from './common/components/book-list/book-list.component';
-import {BookComponent} from "./common/components/book/book.component";
+import { BookListComponent } from './common/components/work-list/work-list.component';
+import {BookComponent} from "./common/components/work/work.component";
 
 
 @NgModule({
