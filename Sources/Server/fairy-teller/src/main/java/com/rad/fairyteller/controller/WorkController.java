@@ -15,8 +15,8 @@ public class WorkController {
     private final WorkMapper workMapper;
 
     @Autowired
-    public WorkController(WorkService masterpieceService, WorkMapper workMapper) {
-        this.workService = masterpieceService;
+    public WorkController(WorkService workService, WorkMapper workMapper) {
+        this.workService = workService;
         this.workMapper = workMapper;
     }
 
