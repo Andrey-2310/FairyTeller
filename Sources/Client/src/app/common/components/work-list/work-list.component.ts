@@ -8,7 +8,7 @@ import {Work} from "../../models/work.model";
   styleUrls: ['../../../styles/work-list.component.css'],
   encapsulation: ViewEncapsulation.None
 })
-export class BookListComponent implements OnInit {
+export class WorkListComponent implements OnInit {
   @Input() works: Work[];
 
   constructor() {

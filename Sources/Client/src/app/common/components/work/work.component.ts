@@ -6,7 +6,7 @@ import {Work} from "../../models/work.model";
   templateUrl: './work.component.html',
   styleUrls: ['../../../styles/work.component.less']
 })
-export class BookComponent {
+export class WorkComponent {
   @Input() work: Work;
 
   showButtons: boolean;

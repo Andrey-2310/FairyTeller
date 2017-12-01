@@ -4,16 +4,16 @@ import { HttpClientModule }   from '@angular/common/http';
 import {MainNavigationBarComponent} from "./common/components/main-navigation-bar/main-navigation-bar.component";
 
 import { AppComponent } from './app.component';
-import { BookListComponent } from './common/components/work-list/work-list.component';
-import {BookComponent} from "./common/components/work/work.component";
+import { WorkListComponent } from './common/components/work-list/work-list.component';
+import {WorkComponent} from "./common/components/work/work.component";
 
 import {IntroductionComponent} from "./modules/startPage/introduction/introduction.component";
 
 @NgModule({
   declarations: [
     AppComponent,
-    BookListComponent,
-    BookComponent,
+    WorkListComponent,
+    WorkComponent,
     AppComponent,
     MainNavigationBarComponent,
     IntroductionComponent
