@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Objects;
 
 @Service
 public class PurchaseService {
@@ -16,11 +17,13 @@ public class PurchaseService {
         this.purchaseRepository = purchaseRepository;
     }
 
-    public void saveOrUpdatePurchase(Purchase purchase){
-        purchaseRepository.save(purchase);
+    public void saveOrUpdatePurchase(Purchase purchase) {
+        if (!Objects.isNull(purchase)) {
+            purchaseRepository.save(purchase);
+        }
     }
 
-    public List<Purchase> getPurchaseListByUserId(Long userId){
+    public List<Purchase> getPurchaseListByUserId(Long userId) {
         return purchaseRepository.findAllByUserId(userId);
     }
 

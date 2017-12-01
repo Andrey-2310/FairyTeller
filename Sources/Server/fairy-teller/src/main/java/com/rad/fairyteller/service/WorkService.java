@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Objects;
 
 @Service
 public class WorkService {
@@ -17,7 +18,9 @@ public class WorkService {
     }
 
     public void saveOrUpdateWork(Work work) {
-        workRepository.save(work);
+        if(!Objects.isNull(work)) {
+            workRepository.save(work);
+        }
     }
 
     public List<Work> getWorksByAuthorId(Long id) {
