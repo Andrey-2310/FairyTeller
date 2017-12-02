@@ -3,7 +3,6 @@ package com.rad.fairyteller.domain.user;
 import com.rad.fairyteller.domain.author.Author;
 import com.rad.fairyteller.domain.purchase.Purchase;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.List;
@@ -27,5 +26,4 @@ public class User {
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private List<Purchase> purchases;
-
 }

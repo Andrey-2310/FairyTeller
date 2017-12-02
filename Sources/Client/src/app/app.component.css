@@ -1,0 +1,15 @@
+.main {
+  display: inline-flex;
+  height: 700px;
+  width: 100%;
+}
+
+.subBook {
+  width: 70%;
+  padding-left: 100px;
+}
+
+.kek {
+  width: 30%;
+}
+

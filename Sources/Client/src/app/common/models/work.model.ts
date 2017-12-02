@@ -2,11 +2,13 @@ import {Chapter} from './chapter.model'
 
 export class Work {
   id: number;
-  authorName: string;
+  views: number;
+  authorId: number;
   title: string;
-  chapters: Array<Chapter>;
+  description: string;
+  coverImagePath: string;
 }
 
 export interface WorkList{
-  purchases: Work[];
+  works: Work[];
 }

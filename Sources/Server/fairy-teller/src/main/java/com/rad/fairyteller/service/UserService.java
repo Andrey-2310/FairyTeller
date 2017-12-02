@@ -5,6 +5,8 @@ import com.rad.fairyteller.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Objects;
+
 @Service
 public class UserService {
     private final UserRepository userRepository;
@@ -15,7 +17,9 @@ public class UserService {
     }
 
     public void saveOrUpdate(User user){
-        userRepository.save(user);
+        if(!Objects.isNull(user)) {
+            userRepository.save(user);
+        }
     }
 
     public void deleteUser(Long id){
