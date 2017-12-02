@@ -5,7 +5,7 @@ import {Work} from "../../models/work.model";
 @Component({
   selector: 'work-list',
   templateUrl: './work-list.component.html',
-  styleUrls: ['../../../styles/work-list.component.css'],
+  styleUrls: ['../../../styles/work-list.component.less'],
   encapsulation: ViewEncapsulation.None
 })
 export class WorkListComponent implements OnInit {

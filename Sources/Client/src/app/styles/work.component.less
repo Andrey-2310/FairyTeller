@@ -1,0 +1,39 @@
+.cover {
+  &__hovered{
+    -webkit-filter: brightness(0.3);
+    filter: brightness(0.3);
+  }
+  img {
+    width: 240px;
+    height: 300px;
+  }
+}
+
+.buttons {
+  position: absolute;
+  top: 125px;
+  left: 25px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.book-button {
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  margin-left: 10px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 20px;
+  border: 1px solid white;
+  background-color: black;
+  color: white;
+  &:hover {
+    border: 1px solid black;
+    background-color: white;
+    color: black;
+  }
+}
+
