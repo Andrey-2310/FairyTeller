@@ -32,7 +32,7 @@ public class WorkController {
     }
 
     @RequestMapping(path = "/work", method = RequestMethod.POST)
-    public void saveOrUpdateWork(@RequestParam Work work) {
+    public void saveOrUpdateWork(@RequestBody Work work) {
         workService.saveOrUpdateWork(work);
     }
 

@@ -1,0 +1,59 @@
+<div class="fullStory">
+  <div class="shortStory">
+    <div class="shortStory__title">Unbroken: A World War II Story of Survival, Resilience</div>
+    <div class="shortStory__rating">
+      <workRating
+        [(averageValue)]="rating"
+        [userValue]="0"
+        (onUserValueChanged)="setNewRating($event)">
+      </workRating>
+    </div>
+  </div>
+  <div class="mainStory">
+    <div class="cover_views">
+      <div class="work_cover">
+        <!--<img [src]="work.coverImagePath" alt=""/>-->
+        <img [src]="'http://res.cloudinary.com/diwv72pih/image/upload/v1512213300/cover_qb5q53.jpg'"/>
+      </div>
+      <div class="work_views">
+        <i class="fa fa-eye" aria-hidden="true"></i> 12134
+      </div>
+    </div>
+    <div class="work_info">
+      <div class="work_info__description">
+        <div class="work_info__description_text">The book tells the story of Paul Bäumer, a German soldier who—urged on
+          by his school teacher—joins the German army shortly after the start of World War I. His class was "scattered
+          over the platoons amongst Frisian fishermen, peasants, and labourers." Bäumer arrives at the Western Front
+          with his friends and schoolmates (Leer, Müller, Kropp and a number of other characters). There they meet
+          Stanislaus Katczinsky, an older soldier, nicknamed Kat, who becomes Paul's mentor. While fighting at the
+          front, Bäumer and his comrades have to engage in frequent battles and endure the treacherous
+        </div>
+      </div>
+      <div class="work_info__general">
+        <div class="work_info__general_info">
+          <div class="info_attributes">
+            <div class="work_author">
+              <div class="work_author_attribute">Author:</div>
+              <div class="work_author_name">{{work.authorName}}</div>
+            </div>
+            <book-attribute *ngFor="let attr of workAttributesValues, let i = index"
+                            [attributeName]="workAttributesNames[i]"
+                            [attributeValue]="attr">
+            </book-attribute>
+          </div>
+          <div class="work_buttons">
+            <button class="book-button">
+              <i class="fa fa-plus " aria-hidden="true"></i>
+            </button>
+            <button class="book-button">
+              <i class="fa fa-book" aria-hidden="true"></i>
+            </button>
+            <button class="book-button">
+              <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

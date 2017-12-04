@@ -1,12 +1,15 @@
-import {Chapter} from './chapter.model'
-
 export class Work {
   id: number;
   views: number;
-  authorId: number;
+  rating: number;
+  authorName: string;
+  year: number;
+  genres: string[];
   title: string;
   description: string;
+  pagesAmount: number;
   coverImagePath: string;
+  language: string;
 }
 
 export interface WorkList{

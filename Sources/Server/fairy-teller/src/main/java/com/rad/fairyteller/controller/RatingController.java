@@ -4,12 +4,10 @@ import com.rad.fairyteller.service.RatingService;
 import com.rad.fairyteller.service.dto.ratingDto.RatingDto;
 import com.rad.fairyteller.service.mapper.RatingMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
+@CrossOrigin
 public class RatingController {
     private final RatingService ratingService;
     private final RatingMapper ratingMapper;
@@ -21,7 +19,7 @@ public class RatingController {
     }
 
     @RequestMapping(name = "rating/save", method = RequestMethod.POST)
-    public void saveRating(@RequestParam RatingDto ratingDto){
+    public void saveRating(@RequestBody RatingDto ratingDto){
         ratingService.saveRating(ratingMapper.toEntity(ratingDto));
     }
 }
