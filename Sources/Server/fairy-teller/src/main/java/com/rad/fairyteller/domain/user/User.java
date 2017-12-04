@@ -2,6 +2,7 @@ package com.rad.fairyteller.domain.user;
 
 import com.rad.fairyteller.domain.author.Author;
 import com.rad.fairyteller.domain.purchase.Purchase;
+import com.rad.fairyteller.domain.work.Work;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -26,4 +27,9 @@ public class User {
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private List<Purchase> purchases;
+
+    @ManyToMany
+    @JoinTable(name = "favWork_user", joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "work_id"))
+    private List<Work> favouriteWorks;
 }

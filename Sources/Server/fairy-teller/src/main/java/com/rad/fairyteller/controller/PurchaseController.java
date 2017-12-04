@@ -28,7 +28,7 @@ public class PurchaseController {
     }
 
     @RequestMapping(path = "/purchase/save", method = RequestMethod.POST)
-    public void saveOrUpdatePurchase(@RequestParam Purchase purchase) {
+    public void saveOrUpdatePurchase(@RequestBody Purchase purchase) {
         purchaseService.saveOrUpdatePurchase(purchase);
     }
 }
