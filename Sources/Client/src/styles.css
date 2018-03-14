@@ -3,3 +3,4 @@ body {
   margin: 0;
 }
 @import '~ngx-bar-rating/themes/br-fontawesome-theme.css';
+@import '~flag-icon-css/css/flag-icon.css';
