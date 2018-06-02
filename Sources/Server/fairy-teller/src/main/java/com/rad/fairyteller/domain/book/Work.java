@@ -1,19 +1,17 @@
-package com.rad.fairyteller.domain.work;
+package com.rad.fairyteller.domain.book;
 
-import com.rad.fairyteller.domain.author.Author;
-import com.rad.fairyteller.domain.chapter.Chapter;
-import com.rad.fairyteller.domain.genre.Genre;
-import com.rad.fairyteller.domain.language.Language;
-import com.rad.fairyteller.domain.purchase.Purchase;
-import com.rad.fairyteller.domain.user.User;
-import lombok.Data;
+import com.rad.fairyteller.domain.Purchase;
+import com.rad.fairyteller.domain.User;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.util.List;
 
 @Entity
 @Table(name = "work")
-@Data
+@Getter
+@Setter
 public class Work {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

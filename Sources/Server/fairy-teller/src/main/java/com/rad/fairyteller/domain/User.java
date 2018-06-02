@@ -1,16 +1,17 @@
-package com.rad.fairyteller.domain.user;
+package com.rad.fairyteller.domain;
 
-import com.rad.fairyteller.domain.author.Author;
-import com.rad.fairyteller.domain.purchase.Purchase;
-import com.rad.fairyteller.domain.work.Work;
-import lombok.Data;
+import com.rad.fairyteller.domain.book.Author;
+import com.rad.fairyteller.domain.book.Work;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.util.List;
 
 @Entity
 @Table(name = "users")
-@Data
+@Getter
+@Setter
 //@NoArgsConstructor
 public class User {
     @Id

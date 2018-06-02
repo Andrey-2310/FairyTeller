@@ -1,4 +1,4 @@
-package com.rad.fairyteller.domain.unit;
+package com.rad.fairyteller.domain.book;
 
 public enum ContentType {
     TEXT,

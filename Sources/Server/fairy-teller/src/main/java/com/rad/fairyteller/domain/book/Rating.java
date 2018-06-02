@@ -1,14 +1,15 @@
-package com.rad.fairyteller.domain.rating;
+package com.rad.fairyteller.domain.book;
 
-import com.rad.fairyteller.domain.user.User;
-import com.rad.fairyteller.domain.work.Work;
-import lombok.Data;
+import com.rad.fairyteller.domain.User;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
 
 @Entity
 @Table(name = "rating")
-@Data
+@Getter
+@Setter
 public class Rating {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

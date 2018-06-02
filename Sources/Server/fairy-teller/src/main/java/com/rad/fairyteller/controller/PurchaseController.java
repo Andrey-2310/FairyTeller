@@ -1,26 +1,21 @@
 package com.rad.fairyteller.controller;
 
-import com.rad.fairyteller.domain.purchase.Purchase;
-import com.rad.fairyteller.service.dto.purchaseDto.PurchaseDto;
-import com.rad.fairyteller.service.mapper.PurchaseMapper;
+import com.rad.fairyteller.domain.Purchase;
 import com.rad.fairyteller.service.PurchaseService;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.rad.fairyteller.service.dto.PurchaseDto;
+import com.rad.fairyteller.service.mapper.PurchaseMapper;
+import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
 @CrossOrigin
+@RequiredArgsConstructor
 public class PurchaseController {
+
     private final PurchaseService purchaseService;
     private final PurchaseMapper purchaseMapper;
-
-
-    @Autowired
-    public PurchaseController(PurchaseService purchaseService, PurchaseMapper purchaseMapper) {
-        this.purchaseService = purchaseService;
-        this.purchaseMapper = purchaseMapper;
-    }
 
     @RequestMapping(path = "/purchaseListByUserId/{id}")
     public List<PurchaseDto> getPurchaseListByUserId(@PathVariable Long id) {

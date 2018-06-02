@@ -1,11 +1,11 @@
 package com.rad.fairyteller.service.mapper;
 
-import com.rad.fairyteller.domain.genre.Genre;
-import com.rad.fairyteller.domain.genre.GenreType;
-import com.rad.fairyteller.domain.language.Language;
-import com.rad.fairyteller.domain.language.LanguageType;
-import com.rad.fairyteller.domain.work.Work;
-import com.rad.fairyteller.service.dto.workDto.WorkDto;
+import com.rad.fairyteller.domain.book.Genre;
+import com.rad.fairyteller.domain.book.GenreType;
+import com.rad.fairyteller.domain.book.Language;
+import com.rad.fairyteller.domain.book.LanguageType;
+import com.rad.fairyteller.domain.book.Work;
+import com.rad.fairyteller.service.dto.WorkDto;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;

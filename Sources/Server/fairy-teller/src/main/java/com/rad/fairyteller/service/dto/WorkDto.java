@@ -1,10 +1,12 @@
-package com.rad.fairyteller.service.dto.workDto;
+package com.rad.fairyteller.service.dto;
 
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.List;
 
-@Data
+@Getter
+@Setter
 public class WorkDto {
     private Long id;
     private Integer views;

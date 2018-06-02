@@ -1,8 +1,8 @@
 package com.rad.fairyteller.controller;
 
-import com.rad.fairyteller.domain.work.Work;
+import com.rad.fairyteller.domain.book.Work;
 import com.rad.fairyteller.service.WorkService;
-import com.rad.fairyteller.service.dto.workDto.WorkDto;
+import com.rad.fairyteller.service.dto.WorkDto;
 import com.rad.fairyteller.service.mapper.WorkMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -12,6 +12,7 @@ import java.util.List;
 @RestController
 @CrossOrigin
 public class WorkController {
+
     private final WorkService workService;
     private final WorkMapper workMapper;
 

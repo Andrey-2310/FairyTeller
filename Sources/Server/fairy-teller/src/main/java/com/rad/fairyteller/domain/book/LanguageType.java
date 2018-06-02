@@ -1,4 +1,4 @@
-package com.rad.fairyteller.domain.language;
+package com.rad.fairyteller.domain.book;
 
 public enum LanguageType {
     EN("EN"),

@@ -1,13 +1,14 @@
-package com.rad.fairyteller.domain.unit;
+package com.rad.fairyteller.domain.book;
 
-import com.rad.fairyteller.domain.chapter.Chapter;
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
 
 @Entity
 @Table(name = "unit")
-@Data
+@Getter
+@Setter
 public class Unit {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

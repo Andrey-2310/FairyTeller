@@ -1,8 +1,10 @@
-package com.rad.fairyteller.service.dto.purchaseDto;
+package com.rad.fairyteller.service.dto;
 
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
-@Data
+@Getter
+@Setter
 public class PurchaseDto {
     private Long id;
     private int price;

@@ -1,4 +1,4 @@
-package com.rad.fairyteller.domain.genre;
+package com.rad.fairyteller.domain.book;
 
 public enum GenreType {
     ADVENTURE("ADVENTURE"),

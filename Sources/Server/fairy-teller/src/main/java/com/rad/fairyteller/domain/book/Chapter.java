@@ -1,15 +1,15 @@
-package com.rad.fairyteller.domain.chapter;
+package com.rad.fairyteller.domain.book;
 
-import com.rad.fairyteller.domain.work.Work;
-import com.rad.fairyteller.domain.unit.Unit;
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.util.List;
 
 @Entity
 @Table(name = "chapter")
-@Data
+@Getter
+@Setter
 public class Chapter {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

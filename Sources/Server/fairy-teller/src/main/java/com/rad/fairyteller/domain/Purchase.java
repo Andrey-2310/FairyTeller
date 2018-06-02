@@ -1,14 +1,15 @@
-package com.rad.fairyteller.domain.purchase;
+package com.rad.fairyteller.domain;
 
-import com.rad.fairyteller.domain.user.User;
-import com.rad.fairyteller.domain.work.Work;
-import lombok.Data;
+import com.rad.fairyteller.domain.book.Work;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
 
 @Entity
 @Table(name = "purchase")
-@Data
+@Getter
+@Setter
 public class Purchase {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

@@ -1,6 +1,6 @@
 package com.rad.fairyteller.repository;
 
-import com.rad.fairyteller.domain.purchase.Purchase;
+import com.rad.fairyteller.domain.Purchase;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

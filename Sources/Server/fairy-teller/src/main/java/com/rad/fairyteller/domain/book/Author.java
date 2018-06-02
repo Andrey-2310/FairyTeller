@@ -1,15 +1,16 @@
-package com.rad.fairyteller.domain.author;
+package com.rad.fairyteller.domain.book;
 
-import com.rad.fairyteller.domain.user.User;
-import com.rad.fairyteller.domain.work.Work;
-import lombok.Data;
+import com.rad.fairyteller.domain.User;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.util.List;
 
 @Entity
 @Table(name = "author")
-@Data
+@Getter
+@Setter
 public class Author {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

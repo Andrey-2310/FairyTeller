@@ -1,8 +1,10 @@
-package com.rad.fairyteller.service.dto.unitDto;
+package com.rad.fairyteller.service.dto;
 
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
-@Data
+@Getter
+@Setter
 public class UnitDto {
     private Long id;
     private String content;

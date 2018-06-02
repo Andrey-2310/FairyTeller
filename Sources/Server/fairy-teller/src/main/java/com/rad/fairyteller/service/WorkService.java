@@ -1,26 +1,21 @@
 package com.rad.fairyteller.service;
 
-import com.rad.fairyteller.domain.work.Work;
+import com.rad.fairyteller.domain.book.Work;
 import com.rad.fairyteller.repository.WorkRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Objects;
+import java.util.Optional;
 
 @Service
+@RequiredArgsConstructor
 public class WorkService {
+
     private final WorkRepository workRepository;
 
-    @Autowired
-    public WorkService(WorkRepository workRepository) {
-        this.workRepository = workRepository;
-    }
-
     public void saveOrUpdateWork(Work work) {
-        if(!Objects.isNull(work)) {
-            workRepository.save(work);
-        }
+        Optional.ofNullable(work).ifPresent(workRepository::save);
     }
 
     public List<Work> getWorksByAuthorId(Long id) {

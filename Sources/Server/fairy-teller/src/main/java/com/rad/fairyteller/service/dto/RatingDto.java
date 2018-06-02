@@ -1,8 +1,10 @@
-package com.rad.fairyteller.service.dto.ratingDto;
+package com.rad.fairyteller.service.dto;
 
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
-@Data
+@Getter
+@Setter
 public class RatingDto {
     private Long id;
     private Long workId;

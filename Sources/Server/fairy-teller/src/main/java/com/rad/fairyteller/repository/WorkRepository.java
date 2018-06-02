@@ -1,6 +1,6 @@
 package com.rad.fairyteller.repository;
 
-import com.rad.fairyteller.domain.work.Work;
+import com.rad.fairyteller.domain.book.Work;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
@@ -20,8 +20,8 @@ public interface WorkRepository extends JpaRepository<Work, Long> {
 
     @Transactional
     @Modifying
-    @Query("UPDATE com.rad.fairyteller.domain.work.Work work " +
-            "SET work.rating= work.rating+ :newRate " +
+    @Query("UPDATE Work work " +
+            "SET work.rating = work.rating + :newRate " +
             "WHERE  work.id = :id")
-    void addRatingToWork(@Param("id") Long id, @Param("newRate") int value);
+    void addRatingToWork(@Param("id") Long id, @Param("newRate") int newRate);
 }

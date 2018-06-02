@@ -1,14 +1,15 @@
-package com.rad.fairyteller.domain.language;
+package com.rad.fairyteller.domain.book;
 
-import com.rad.fairyteller.domain.work.Work;
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.util.List;
 
-@Data
 @Entity
 @Table(name = "language")
+@Getter
+@Setter
 public class Language {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
