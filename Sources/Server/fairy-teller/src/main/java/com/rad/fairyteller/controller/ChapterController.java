@@ -1,26 +1,20 @@
 package com.rad.fairyteller.controller;
 
+import com.rad.fairyteller.mapping.dto.ChapterDto;
 import com.rad.fairyteller.service.ChapterService;
-import com.rad.fairyteller.service.dto.chapterDto.ChapterDto;
-import com.rad.fairyteller.service.mapper.ChapterMapper;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@RequiredArgsConstructor
 public class ChapterController {
-    private final ChapterService chapterService;
-    private final ChapterMapper chapterMapper;
 
-    @Autowired
-    public ChapterController(ChapterService chapterService, ChapterMapper chapterMapper) {
-        this.chapterService = chapterService;
-        this.chapterMapper = chapterMapper;
-    }
+    private final ChapterService chapterService;
 
     @RequestMapping(path = "/getChapterById/{id}")
-    public ChapterDto getPurchaseListByUserId(@PathVariable Long id) {
-        return chapterMapper.toDto(chapterService.getChapterById(id));
+    public ChapterDto getPurchaseListByUserId(@PathVariable final Long id) {
+        return chapterService.getChapterById(id);
     }
 }

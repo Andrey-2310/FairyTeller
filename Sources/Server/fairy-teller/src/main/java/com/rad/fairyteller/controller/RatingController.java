@@ -1,25 +1,22 @@
 package com.rad.fairyteller.controller;
 
+import com.rad.fairyteller.mapping.dto.RatingDto;
 import com.rad.fairyteller.service.RatingService;
-import com.rad.fairyteller.service.dto.ratingDto.RatingDto;
-import com.rad.fairyteller.service.mapper.RatingMapper;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
+import lombok.RequiredArgsConstructor;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @CrossOrigin
+@RequiredArgsConstructor
 public class RatingController {
+
     private final RatingService ratingService;
-    private final RatingMapper ratingMapper;
 
-    @Autowired
-    public RatingController(RatingService ratingService, RatingMapper ratingMapper) {
-        this.ratingService = ratingService;
-        this.ratingMapper = ratingMapper;
-    }
-
-    @RequestMapping(name = "rating/save", method = RequestMethod.POST)
-    public void saveRating(@RequestBody RatingDto ratingDto){
-        ratingService.saveRating(ratingMapper.toEntity(ratingDto));
+    @PostMapping(name = "rating/save")
+    public void saveRating(@RequestBody final RatingDto ratingDto) {
+        ratingService.saveRating(ratingDto);
     }
 }

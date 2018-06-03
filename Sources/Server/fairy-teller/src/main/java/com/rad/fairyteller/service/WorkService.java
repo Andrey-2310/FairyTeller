@@ -1,34 +1,32 @@
 package com.rad.fairyteller.service;
 
-import com.rad.fairyteller.domain.work.Work;
+import com.rad.fairyteller.domain.book.Work;
+import com.rad.fairyteller.mapping.dto.WorkDto;
+import com.rad.fairyteller.mapping.mapper.WorkMapper;
 import com.rad.fairyteller.repository.WorkRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Objects;
+import java.util.Optional;
 
 @Service
+@RequiredArgsConstructor
 public class WorkService {
+
+    private final WorkMapper workMapper;
     private final WorkRepository workRepository;
 
-    @Autowired
-    public WorkService(WorkRepository workRepository) {
-        this.workRepository = workRepository;
+    public void saveOrUpdateWork(final Work work) {
+        Optional.ofNullable(work).ifPresent(workRepository::save);
     }
 
-    public void saveOrUpdateWork(Work work) {
-        if(!Objects.isNull(work)) {
-            workRepository.save(work);
-        }
+    public List<WorkDto> getWorksByAuthorId(final Long id) {
+        return workMapper.toDto(workRepository.findAllByAuthorId(id));
     }
 
-    public List<Work> getWorksByAuthorId(Long id) {
-        return workRepository.findAllByAuthor_Id(id);
-    }
-
-    public List<Work> getNextPopularWorks(Integer from) {
-        return from.equals(-1) ? workRepository.findTop5ByOrderByViewsDesc() :
-                workRepository.findTop5ByViewsLessThanOrderByViewsDesc(from);
+    public List<WorkDto> getNextPopularWorks(final Integer from) {
+        return workMapper.toDto(from.equals(-1) ? workRepository.findTop5ByOrderByViewsDesc()
+                : workRepository.findTop5ByViewsLessThanOrderByViewsDesc(from));
     }
 }
