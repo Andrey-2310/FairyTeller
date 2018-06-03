@@ -18,15 +18,16 @@ public class RatingService {
     private final RatingRepository ratingRepository;
     private final WorkRepository workRepository;
 
-    private final static int RATING_LOWER_BORDER = 1;
-    private final static int RATING_UPPER_BORDER = 5;
+    private static final int RATING_LOWER_BORDER = 1;
+    private static final int RATING_UPPER_BORDER = 5;
 
 
     public void saveRating(final Rating rating) {
         if (nonNull(rating) && isRatingValid(rating)) {
             final Rating existingRating = isThereExistingRating(rating);
             workRepository.addRatingToWork(rating.getWork().getId(),
-                    isNull(existingRating) ? rating.getValue() : rating.getValue() - existingRating.getValue());
+                    isNull(existingRating) ? rating.getValue()
+                            : rating.getValue() - existingRating.getValue());
             Optional.ofNullable(existingRating).ifPresent(ratingRepository::delete);
             ratingRepository.save(rating);
         }
@@ -36,7 +37,7 @@ public class RatingService {
         return  rating.getValue() >= RATING_LOWER_BORDER && rating.getValue() <= RATING_UPPER_BORDER;
     }
 
-    private Rating isThereExistingRating(Rating rating) {
+    private Rating isThereExistingRating(final Rating rating) {
         return ratingRepository.findAllByWorkIdAndUserId(
                 rating.getWork().getId(), rating.getUser().getId()).get(0);
     }

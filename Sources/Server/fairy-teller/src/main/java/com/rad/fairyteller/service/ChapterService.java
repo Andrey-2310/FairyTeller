@@ -11,7 +11,7 @@ public class ChapterService {
 
     private final ChapterRepository chapterRepository;
 
-    public Chapter getChapterById(Long id) {
+    public Chapter getChapterById(final Long id) {
         return chapterRepository.findOne(id);
     }
 }

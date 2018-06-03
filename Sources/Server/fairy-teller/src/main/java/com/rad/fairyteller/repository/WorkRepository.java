@@ -12,7 +12,7 @@ import java.util.List;
 
 @Repository
 public interface WorkRepository extends JpaRepository<Work, Long> {
-    List<Work> findAllByAuthor_Id(Long id);
+    List<Work> findAllByAuthorId(Long id);
 
     List<Work> findTop5ByViewsLessThanOrderByViewsDesc(Integer from);
 
@@ -20,8 +20,8 @@ public interface WorkRepository extends JpaRepository<Work, Long> {
 
     @Transactional
     @Modifying
-    @Query("UPDATE Work work " +
-            "SET work.rating = work.rating + :newRate " +
-            "WHERE  work.id = :id")
-    void addRatingToWork(@Param("id") Long id, @Param("newRate") int newRate);
+    @Query("UPDATE Work work "
+            + "SET work.rating = work.rating + :newRate "
+            + "WHERE  work.id = :id")
+    void addRatingToWork(@Param("id") final Long id, @Param("newRate") final int newRate);
 }

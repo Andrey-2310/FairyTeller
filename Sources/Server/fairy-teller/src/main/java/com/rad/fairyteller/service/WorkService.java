@@ -14,16 +14,16 @@ public class WorkService {
 
     private final WorkRepository workRepository;
 
-    public void saveOrUpdateWork(Work work) {
+    public void saveOrUpdateWork(final Work work) {
         Optional.ofNullable(work).ifPresent(workRepository::save);
     }
 
-    public List<Work> getWorksByAuthorId(Long id) {
-        return workRepository.findAllByAuthor_Id(id);
+    public List<Work> getWorksByAuthorId(final Long id) {
+        return workRepository.findAllByAuthorId(id);
     }
 
-    public List<Work> getNextPopularWorks(Integer from) {
-        return from.equals(-1) ? workRepository.findTop5ByOrderByViewsDesc() :
-                workRepository.findTop5ByViewsLessThanOrderByViewsDesc(from);
+    public List<Work> getNextPopularWorks(final Integer from) {
+        return from.equals(-1) ? workRepository.findTop5ByOrderByViewsDesc()
+                : workRepository.findTop5ByViewsLessThanOrderByViewsDesc(from);
     }
 }

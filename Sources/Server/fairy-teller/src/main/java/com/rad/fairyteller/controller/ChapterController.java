@@ -16,7 +16,7 @@ public class ChapterController {
     private final ChapterMapper chapterMapper;
 
     @RequestMapping(path = "/getChapterById/{id}")
-    public ChapterDto getPurchaseListByUserId(@PathVariable Long id) {
+    public ChapterDto getPurchaseListByUserId(@PathVariable final Long id) {
         return chapterMapper.toDto(chapterService.getChapterById(id));
     }
 }

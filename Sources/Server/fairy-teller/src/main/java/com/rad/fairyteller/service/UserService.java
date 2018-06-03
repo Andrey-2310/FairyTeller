@@ -12,11 +12,11 @@ import java.util.Optional;
 public class UserService {
     private final UserRepository userRepository;
 
-    public void saveOrUpdate(User user) {
+    public void saveOrUpdate(final User user) {
         Optional.ofNullable(user).ifPresent(userRepository::save);
     }
 
-    public void deleteUser(Long id) {
+    public void deleteUser(final Long id) {
         userRepository.delete(id);
     }
 }

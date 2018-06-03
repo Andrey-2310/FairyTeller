@@ -16,7 +16,7 @@ public class UnitController {
     private final UnitMapper unitMapper;
 
     @RequestMapping(path = "/findUnitById/{id}")
-    public UnitDto findUnitById(@PathVariable Long id){
+    public UnitDto findUnitById(@PathVariable final Long id) {
         return unitMapper.toDto(unitService.findUnitById(id));
     }
 

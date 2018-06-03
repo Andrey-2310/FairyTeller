@@ -14,15 +14,15 @@ public class PurchaseService {
 
     private final PurchaseRepository purchaseRepository;
 
-    public void saveOrUpdatePurchase(Purchase purchase) {
+    public void saveOrUpdatePurchase(final Purchase purchase) {
         Optional.ofNullable(purchase).ifPresent(purchaseRepository::save);
     }
 
-    public List<Purchase> getPurchaseListByUserId(Long userId) {
+    public List<Purchase> getPurchaseListByUserId(final Long userId) {
         return purchaseRepository.findAllByUserId(userId);
     }
 
-    public Purchase getById(Long id) {
+    public Purchase getById(final Long id) {
         return purchaseRepository.findOne(id);
     }
 }

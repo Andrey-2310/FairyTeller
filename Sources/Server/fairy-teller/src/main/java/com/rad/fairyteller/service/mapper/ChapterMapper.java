@@ -7,7 +7,7 @@ import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;
 
 @Mapper(componentModel = "spring")
-public interface ChapterMapper extends EntityMapper<ChapterDto, Chapter>{
+public interface ChapterMapper extends EntityMapper<ChapterDto, Chapter> {
     @Mappings({
             @Mapping(target = "workId", source = "chapter.work.id")
     })

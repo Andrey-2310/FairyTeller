@@ -8,7 +8,7 @@ public enum GenreType {
 
     private String value;
 
-    GenreType(String value) {
+    GenreType(final String value) {
         this.value = value;
     }
 
