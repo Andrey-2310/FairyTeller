@@ -1,20 +1,19 @@
 package com.rad.fairyteller.service;
 
-import com.rad.fairyteller.domain.unit.Unit;
+import com.rad.fairyteller.mapping.dto.UnitDto;
+import com.rad.fairyteller.mapping.mapper.UnitMapper;
 import com.rad.fairyteller.repository.UnitRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 @Service
+@RequiredArgsConstructor
 public class UnitService {
+
+    private final UnitMapper unitMapper;
     private UnitRepository unitRepository;
 
-    @Autowired
-    public UnitService(UnitRepository unitRepository) {
-        this.unitRepository = unitRepository;
-    }
-
-    public Unit findUnitById(Long id) {
-        return unitRepository.findOne(id);
+    public UnitDto findUnitById(Long id) {
+        return unitMapper.toDto(unitRepository.findOne(id));
     }
 }

@@ -1,28 +1,22 @@
 package com.rad.fairyteller.service;
 
-import com.rad.fairyteller.domain.user.User;
+import com.rad.fairyteller.domain.User;
 import com.rad.fairyteller.repository.UserRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import java.util.Objects;
+import java.util.Optional;
 
 @Service
+@RequiredArgsConstructor
 public class UserService {
     private final UserRepository userRepository;
 
-    @Autowired
-    public UserService(UserRepository userRepository) {
-        this.userRepository = userRepository;
+    public void saveOrUpdate(final User user) {
+        Optional.ofNullable(user).ifPresent(userRepository::save);
     }
 
-    public void saveOrUpdate(User user){
-        if(!Objects.isNull(user)) {
-            userRepository.save(user);
-        }
-    }
-
-    public void deleteUser(Long id){
+    public void deleteUser(final Long id) {
         userRepository.delete(id);
     }
 }
