@@ -6,6 +6,7 @@ import com.rad.fairyteller.repository.WorkRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.Optional;
 
 import static java.util.Objects.isNull;
@@ -21,7 +22,7 @@ public class RatingService {
     private static final int RATING_LOWER_BORDER = 1;
     private static final int RATING_UPPER_BORDER = 5;
 
-
+    @Transactional
     public void saveRating(final Rating rating) {
         if (nonNull(rating) && isRatingValid(rating)) {
             final Rating existingRating = isThereExistingRating(rating);
@@ -34,7 +35,7 @@ public class RatingService {
     }
 
     private boolean isRatingValid(final Rating rating) {
-        return  rating.getValue() >= RATING_LOWER_BORDER && rating.getValue() <= RATING_UPPER_BORDER;
+        return rating.getValue() >= RATING_LOWER_BORDER && rating.getValue() <= RATING_UPPER_BORDER;
     }
 
     private Rating isThereExistingRating(final Rating rating) {
