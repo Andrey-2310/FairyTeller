@@ -1,8 +1,8 @@
-package com.rad.fairyteller.service.mapper;
+package com.rad.fairyteller.mapping.mapper;
 
 
 import com.rad.fairyteller.domain.book.Unit;
-import com.rad.fairyteller.service.dto.UnitDto;
+import com.rad.fairyteller.mapping.dto.UnitDto;
 import org.mapstruct.Mapper;
 
 @Mapper(componentModel = "spring")

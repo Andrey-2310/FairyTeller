@@ -1,7 +1,7 @@
-package com.rad.fairyteller.service.mapper;
+package com.rad.fairyteller.mapping.mapper;
 
 import com.rad.fairyteller.domain.Purchase;
-import com.rad.fairyteller.service.dto.PurchaseDto;
+import com.rad.fairyteller.mapping.dto.PurchaseDto;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;

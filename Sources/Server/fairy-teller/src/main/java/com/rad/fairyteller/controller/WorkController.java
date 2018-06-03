@@ -1,9 +1,8 @@
 package com.rad.fairyteller.controller;
 
 import com.rad.fairyteller.domain.book.Work;
+import com.rad.fairyteller.mapping.dto.WorkDto;
 import com.rad.fairyteller.service.WorkService;
-import com.rad.fairyteller.service.dto.WorkDto;
-import com.rad.fairyteller.service.mapper.WorkMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -20,18 +19,18 @@ import java.util.List;
 public class WorkController {
 
     private final WorkService workService;
-    private final WorkMapper workMapper;
 
     @RequestMapping(path = "/worksByAuthorId/{id}")
     public List<WorkDto> getworksByAuthorId(@PathVariable final Long id) {
-        return workMapper.toDto(workService.getWorksByAuthorId(id));
+        return workService.getWorksByAuthorId(id);
     }
 
     @RequestMapping(path = "/nextPopularWorks/{from}")
     public List<WorkDto> getNextPopularWorks(@PathVariable final Integer from) {
-        return workMapper.toDto(workService.getNextPopularWorks(from));
+        return workService.getNextPopularWorks(from);
     }
 
+    //TODO: maybe get dto, not entity
     @PostMapping(path = "/work")
     public void saveOrUpdateWork(@RequestBody final Work work) {
         workService.saveOrUpdateWork(work);

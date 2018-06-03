@@ -1,4 +1,4 @@
-package com.rad.fairyteller.service.dto;
+package com.rad.fairyteller.mapping.dto;
 
 import lombok.Getter;
 import lombok.Setter;

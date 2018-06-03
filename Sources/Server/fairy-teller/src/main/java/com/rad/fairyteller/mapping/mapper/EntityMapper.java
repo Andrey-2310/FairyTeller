@@ -1,4 +1,4 @@
-package com.rad.fairyteller.service.mapper;
+package com.rad.fairyteller.mapping.mapper;
 
 import org.mapstruct.InheritInverseConfiguration;
 

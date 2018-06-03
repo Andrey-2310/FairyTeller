@@ -1,6 +1,8 @@
 package com.rad.fairyteller.service;
 
 import com.rad.fairyteller.domain.book.Rating;
+import com.rad.fairyteller.mapping.dto.RatingDto;
+import com.rad.fairyteller.mapping.mapper.RatingMapper;
 import com.rad.fairyteller.repository.RatingRepository;
 import com.rad.fairyteller.repository.WorkRepository;
 import lombok.RequiredArgsConstructor;
@@ -18,12 +20,14 @@ public class RatingService {
 
     private final RatingRepository ratingRepository;
     private final WorkRepository workRepository;
+    private final RatingMapper ratingMapper;
 
     private static final int RATING_LOWER_BORDER = 1;
     private static final int RATING_UPPER_BORDER = 5;
 
     @Transactional
-    public void saveRating(final Rating rating) {
+    public void saveRating(final RatingDto ratingDto) {
+        final Rating rating = ratingMapper.toEntity(ratingDto);
         if (nonNull(rating) && isRatingValid(rating)) {
             final Rating existingRating = isThereExistingRating(rating);
             workRepository.addRatingToWork(rating.getWork().getId(),
