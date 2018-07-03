@@ -3,7 +3,6 @@ package com.rad.fairyteller.mapping.mapper;
 import com.rad.fairyteller.domain.book.Genre;
 import com.rad.fairyteller.domain.book.GenreType;
 import com.rad.fairyteller.domain.book.Language;
-import com.rad.fairyteller.domain.book.LanguageType;
 import com.rad.fairyteller.domain.book.Work;
 import com.rad.fairyteller.mapping.dto.WorkDto;
 import org.mapstruct.Mapper;
@@ -37,13 +36,6 @@ public interface WorkMapper extends EntityMapper<WorkDto, Work> {
     }
 
     default String mapLanguageToString(Language language) {
-        return language.getLanguageType().toString();
-    }
-
-    default Language mapStringToLanguage(String string) {
-        Language language = new Language();
-        LanguageType languageType = LanguageType.valueOf(string);
-        language.setLanguageType(languageType);
-        return language;
+        return language.toString();
     }
 }

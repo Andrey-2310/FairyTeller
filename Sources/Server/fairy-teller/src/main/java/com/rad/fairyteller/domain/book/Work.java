@@ -8,6 +8,8 @@ import lombok.Setter;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -51,8 +53,8 @@ public class Work {
     @Column(name = "pagesAmount")
     private int pagesAmount;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "language_id")
+    @Column(name = "lang")
+    @Enumerated(EnumType.STRING)
     private Language language;
 
     @ManyToOne(fetch = FetchType.LAZY)
