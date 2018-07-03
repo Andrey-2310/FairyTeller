@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {PurchaseService} from "./common/services/purchase.service";
 import {Purchase, PurchaseList} from "./common/models/purchase.model";
-import {Observable} from "rxjs/Observable";
 import {Work, WorkList} from "./common/models/work.model";
 import {WorkService} from "./common/services/work.service";
 

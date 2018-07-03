@@ -1,7 +1,9 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {HttpClientModule} from '@angular/common/http';
-import { BarRatingModule } from "ngx-bar-rating";
+import {BarRatingModule} from 'ngx-bar-rating';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatButtonModule} from '@angular/material/button';
 
 import {Routes, RouterModule} from '@angular/router';
 
@@ -11,7 +13,7 @@ import {WorkComponent} from './common/components/work/work.component';
 import {IntroductionComponent} from './modules/startPage/introduction/introduction.component';
 import {WorkMainPageComponent} from './common/components/work-main-page/work-main-page.component';
 import {BookAttributeComponent} from './common/components/work-main-page/work-attribute/work-attribute.component';
-import {MainNavigationBarComponent} from "./common/components/main-navigation-bar/main-navigation-bar.component";
+import {MainNavigationBarComponent} from './common/components/main-navigation-bar/main-navigation-bar.component';
 import {RatingComponent} from './common/components/rating/rating.component';
 
 const appRoutes: Routes = [
@@ -32,12 +34,15 @@ const appRoutes: Routes = [
     IntroductionComponent,
     BookAttributeComponent,
     WorkMainPageComponent,
-    RatingComponent
+    RatingComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     BarRatingModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+
     RouterModule.forRoot(appRoutes)
   ],
   providers: [],
